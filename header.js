@@ -1,9 +1,10 @@
-// Initialize Animations (AOS)
+// Initialize Animations (AOS) with Apple fluid motion defaults
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
-    duration: 800,
+    duration: 500,
+    easing: "cubic-bezier(0.16, 1, 0.3, 1)",
     once: true,
-    offset: 50,
+    offset: 30,
   });
 
   // Check for saved theme
@@ -40,12 +41,57 @@ themeBtn.addEventListener("click", () => {
     body.removeAttribute("data-theme");
     icon.classList.replace("fa-sun", "fa-moon");
     localStorage.setItem("theme", "dark");
+    updateThemeColorMeta("#000000");
   } else {
     body.setAttribute("data-theme", "light");
     icon.classList.replace("fa-moon", "fa-sun");
     localStorage.setItem("theme", "light");
+    updateThemeColorMeta("#fbfbfd");
   }
 });
+
+function updateThemeColorMeta(color) {
+  let meta = document.querySelector('meta[name="theme-color"]:not([media])');
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute("name", "theme-color");
+    document.head.appendChild(meta);
+  }
+  meta.setAttribute("content", color);
+}
+
+// Carousel Touch Swipe Support (Apple Direct Manipulation & Velocity Awareness)
+const carouselContainer = document.querySelector(".carousel-container");
+if (carouselContainer) {
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carouselContainer.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    },
+    { passive: true }
+  );
+
+  carouselContainer.addEventListener(
+    "touchend",
+    (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    },
+    { passive: true }
+  );
+
+  function handleSwipe() {
+    const threshold = 45; // Minimum px to trigger transition
+    if (touchEndX < touchStartX - threshold) {
+      moveSlide(1); // Swipe left -> Next
+    } else if (touchEndX > touchStartX + threshold) {
+      moveSlide(-1); // Swipe right -> Prev
+    }
+  }
+}
 
 // Carousel Logic
 let currentSlide = 0;

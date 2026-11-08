@@ -3,12 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfbfd">
   <title>Portafolio - Jose Cleider Soto Celis</title>
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Custom CSS -->
@@ -48,12 +55,19 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
       <div class="hero-content" data-aos="fade-right">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Bachiller en Ing. de Sistemas · Título en trámite</span>
+        </div>
         <h3>Hola, soy</h3>
         <h1>Jose Cleider <span>Soto Celis</span></h1>
         <h4>Ingeniero de Sistemas Computacionales</h4>
         <p>
-          Transformo desafíos en soluciones digitales. Especialista en Desarrollo Full Stack y Sistemas Inteligentes,
-          ayudo a empresas a optimizar procesos y escalar su presencia digital con tecnologías modernas y eficientes.
+          Bachiller graduado en Ingeniería de Sistemas Computacionales (título profesional en trámite), especializado
+          en arquitectura de software, desarrollo Full Stack y sistemas inteligentes. Combino rigor técnico en
+          ingeniería con
+          diseño de soluciones escalables, optimizando procesos corporativos y creando experiencias digitales intuitivas
+          y de alto impacto.
         </p>
         <div class="btn-box">
           <a href="#proyectos" class="btn">Ver Proyectos</a>
@@ -68,7 +82,7 @@
     <!-- About Section -->
     <section id="acerca">
       <div class="section-title" data-aos="fade-up">
-        <h2>Acerca De <span>Mi</span></h2>
+        <h2>Acerca De <span>Mí</span></h2>
       </div>
       <div class="about-container">
         <div class="about-img" data-aos="fade-right">
@@ -76,26 +90,42 @@
           <i class="fa-solid fa-code-branch" style="font-size: 15rem; color: var(--glass-border);"></i>
         </div>
         <div class="about-text" data-aos="fade-left">
-          <h3>Más que código, ofrezco resultados.</h3>
+          <h3>Ingeniería aplicada, innovación y resultados tangibles.</h3>
           <p>
-            Como Ingeniero de Sistemas, entiendo que la tecnología es un medio para alcanzar objetivos de negocio.
-            No solo escribo código; diseño arquitecturas escalables y experiencias de usuario que convierten.
+            Soy <strong>Bachiller en Ingeniería de Sistemas Computacionales</strong> por la Universidad Privada del
+            Norte, actualmente con mi <strong>título profesional en trámite</strong>. Mi formación universitaria y
+            experiencia práctica me permiten abordar el software no sólo como código, sino como un activo estratégico
+            orientado a la escalabilidad, mantenibilidad y metas de negocio.
           </p>
           <p>
-            Mi enfoque combina la <strong>precisión técnica</strong> del Backend (Java, Python, Spring) con la
-            <strong>creatividad visual</strong> del Frontend (React, Flutter). Ya sea automatizando procesos operativos
-            o lanzando una nueva app móvil, mi compromiso es entregar calidad y valor tangible.
+            Mi perfil integra un sólido dominio del <strong>Backend y arquitecturas robustas</strong> (Java, Spring
+            Boot, Python, FastAPI, ASP.NET Core, bases de datos relacionales y NoSQL) junto a la creación de interfaces
+            modernas y fluidas en el <strong>Frontend y Móvil</strong> (Angular, React, Flutter). Además, desarrollo
+            soluciones de automatización, visión computacional con IA e integración de servicios en tiempo real.
           </p>
-          <p>
-            <strong>¿Qué aporto a tu empresa?</strong>
-          <ul style="list-style: none; margin-top: 10px;">
-            <li><i class="fa-solid fa-check" style="color: var(--primary-color);"></i> Desarrollo ágil y limpio.</li>
-            <li><i class="fa-solid fa-check" style="color: var(--primary-color);"></i> Comunicación efectiva y liderazgo
-              técnico.</li>
-            <li><i class="fa-solid fa-check" style="color: var(--primary-color);"></i> Adaptabilidad a nuevas
-              tecnologías en tiempo récord.</li>
-          </ul>
-          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <strong>Grado Académico</strong>
+                <span>Bachiller en Ingeniería de Sistemas Computacionales (Título en trámite)</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-layer-group"></i>
+              <div>
+                <strong>Enfoque Integral</strong>
+                <span>Arquitecturas Limpias, Microservicios, APIs RESTful y Seguridad</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-bolt"></i>
+              <div>
+                <strong>Valor que aporto</strong>
+                <span>Resolución analítica de problemas, liderazgo técnico y despliegues eficientes</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -107,7 +137,7 @@
       </div>
       <div class="skills-container">
         <!-- Lenguajes -->
-        <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="50">
           <h3><i class="fa-solid fa-code"></i> Lenguajes</h3>
           <div class="skill-list">
             <span class="skill-tag">Java</span>
@@ -120,7 +150,7 @@
           </div>
         </div>
         <!-- Backend -->
-        <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
           <h3><i class="fa-solid fa-server"></i> Backend</h3>
           <div class="skill-list">
             <span class="skill-tag">Spring Boot</span>
@@ -131,7 +161,7 @@
           </div>
         </div>
         <!-- Frontend -->
-        <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
           <h3><i class="fa-solid fa-desktop"></i> Frontend</h3>
           <div class="skill-list">
             <span class="skill-tag">Angular</span>
@@ -141,7 +171,7 @@
           </div>
         </div>
         <!-- Mobile & Tools -->
-        <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
           <h3><i class="fa-solid fa-mobile-screen"></i> Móvil & DevOps</h3>
           <div class="skill-list">
             <span class="skill-tag">Flutter</span>
@@ -161,29 +191,37 @@
       </div>
       <div class="projects-grid">
 
-<!--project 14-->
+        <!--project 14-->
         <div class="project-card" data-aos="fade-up" data-aos-delay="500">
           <div class="project-content">
             <h3>Api Rest Crud con Asp.Net Core y Entity Framework Core</h3>
             <p class="tech-stack">C# y sql</p>
-            <p>Desarrollé una API RESTful escalable con ASP.NET Core (.NET 10) y Entity Framework Core (Code First), implementando operaciones CRUD para la gestión de productos. Configuré integración con SQL Server, documentación con Swagger/OpenAPI y estructura basada en buenas prácticas, optimizando la mantenibilidad y escalabilidad del sistema.</p>
+            <p>Desarrollé una API RESTful escalable con ASP.NET Core (.NET 10) y Entity Framework Core (Code First),
+              implementando operaciones CRUD para la gestión de productos. Configuré integración con SQL Server,
+              documentación con Swagger/OpenAPI y estructura basada en buenas prácticas, optimizando la mantenibilidad y
+              escalabilidad del sistema.</p>
           </div>
         </div>
-<!--project 13-->
+        <!--project 13-->
         <div class="project-card" data-aos="fade-up" data-aos-delay="500">
           <div class="project-content">
             <h3> FaceAccess - Sistema de Control de Acceso basado en reconocimiento facial</h3>
             <p class="tech-stack">Python, Angular, WebSockets y PostgreSQL </p>
-            <p>Diseñé e implementé un sistema de control de acceso biométrico con reconocimiento facial en tiempo real, integrando FastAPI, Angular y PostgreSQL. Incorporé algoritmos de computer vision (OpenCV, face_recognition) con detección de vida (blink detection), arquitectura basada en WebSockets para eventos en tiempo real y un dashboard para gestión de usuarios y monitoreo de alertas de seguridad.</p>
+            <p>Diseñé e implementé un sistema de control de acceso biométrico con reconocimiento facial en tiempo real,
+              integrando FastAPI, Angular y PostgreSQL. Incorporé algoritmos de computer vision (OpenCV,
+              face_recognition) con detección de vida (blink detection), arquitectura basada en WebSockets para eventos
+              en tiempo real y un dashboard para gestión de usuarios y monitoreo de alertas de seguridad.</p>
           </div>
         </div>
 
-         <!--project 12-->
+        <!--project 12-->
         <div class="project-card" data-aos="fade-up" data-aos-delay="500">
           <div class="project-content">
             <h3>Login Y Registro en Angular</h3>
             <p class="tech-stack">Angular</p>
-            <p>Aplicación frontend en Angular con sistema completo de autenticación. Incluye login y registros conectados a API REST, manejo de sesión con JWT, protección de rutas y una interfaz moderna con animaciones.</p>
+            <p>Aplicación frontend en Angular con sistema completo de autenticación. Incluye login y registros
+              conectados a API REST, manejo de sesión con JWT, protección de rutas y una interfaz moderna con
+              animaciones.</p>
           </div>
         </div>
         <!--project 11-->
@@ -191,7 +229,8 @@
           <div class="project-content">
             <h3>Api Rest de Autenticación</h3>
             <p class="tech-stack">Node.js, Express y MySQL- jwt</p>
-            <p>API REST de autenticación para sitio web, incluye registro y login de usuarios, encriptación de contraseñas con bcrypt, generación de tokens JWT y manejo seguro de sesiones.</p>
+            <p>API REST de autenticación para sitio web, incluye registro y login de usuarios, encriptación de
+              contraseñas con bcrypt, generación de tokens JWT y manejo seguro de sesiones.</p>
           </div>
         </div>
         <!-- Project 10 -->
@@ -199,7 +238,9 @@
           <div class="project-content">
             <h3>Api Crud de Usuarios</h3>
             <p class="tech-stack">Node.js, Express y MySQL</p>
-            <p>API REST desarrollada que implementa un CRUD de usuarios, Utiliza un pool de conexiones para mejorar el rendimiento y variables de entorno para la configuración. Incluye inicialización automática de la tabla users, permitiendo que la base de datos se configure al iniciar el proyecto.</p>
+            <p>API REST desarrollada que implementa un CRUD de usuarios, Utiliza un pool de conexiones para mejorar el
+              rendimiento y variables de entorno para la configuración. Incluye inicialización automática de la tabla
+              users, permitiendo que la base de datos se configure al iniciar el proyecto.</p>
           </div>
         </div>
         <!-- Project 9 -->
@@ -229,7 +270,7 @@
               gestión de usuarios y soporte de modo claro/oscuro.</p>
           </div>
         </div>
-         <!-- Project 6 -->
+        <!-- Project 6 -->
         <div class="project-card" data-aos="fade-up" data-aos-delay="400">
           <div class="project-content">
             <h3>Login y Registro Responsive</h3>
@@ -247,7 +288,7 @@
               datos, utilizando Spring Data JPA y conexión a MySQL.</p>
           </div>
         </div>
-         <!-- Project 4 -->
+        <!-- Project 4 -->
         <div class="project-card" data-aos="fade-up" data-aos-delay="250">
           <div class="project-content">
             <h3>Visión Artificial Fitness</h3>
@@ -256,7 +297,7 @@
               real, con métricas de postura y conteo automático de repeticiones.</p>
           </div>
         </div>
-         <!-- Project 3 -->
+        <!-- Project 3 -->
         <div class="project-card" data-aos="fade-up" data-aos-delay="200">
           <div class="project-content">
             <h3>Simulador Cajero Automático</h3>
@@ -339,7 +380,11 @@
             <h3>Ingeniería de Sistemas Computacionales</h3>
             <h4>Universidad Privada del Norte</h4>
             <span class="date"><i class="fa-regular fa-calendar"></i> 2021 - 2025</span>
-            <p>Bachiller. Enfoque en desarrollo de software y gestión de proyectos TI.</p>
+            <p><strong>Grado:</strong> Bachiller en Ingeniería de Sistemas Computacionales (Título profesional en
+              trámite de emisión).</p>
+            <p style="margin-top: 8px;">Formación integral con alta especialización en ingeniería y arquitectura de
+              software, bases de datos avanzadas, seguridad informática, gestión ágil de proyectos (Scrum) y desarrollo
+              de soluciones distribuidas y cloud.</p>
           </div>
         </div>
       </div>
@@ -352,20 +397,32 @@
       </div>
       <div class="timeline">
         <!-- Exp 1 -->
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="timeline-content">
+            <h3>Asistente de TI</h3>
+            <h4>TURISMO LOS ALGARROBOS S.A.</h4>
+            <span class="date"><i class="fa-regular fa-calendar"></i> Abril 2026 – Actualmente</span>
+            <p>Soporte técnico a usuarios y mantenimiento de equipos, instalación y configuración de software
+              corporativo, gestión de incidencias de hardware y software,ejecución y monitoreo de backups de información
+              y sistemas.
+            </p>
+          </div>
+        </div>
+        <!-- Exp 2 -->
         <div class="timeline-item left" data-aos="fade-right">
           <div class="timeline-content">
             <h3>Auxiliar en Ing. de Sistemas</h3>
             <h4>FRUTEX PERÚ S.A.C.</h4>
-            <span class="date"><i class="fa-regular fa-calendar"></i> Ene 2024 – Ene 2025</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i> Enero 2024 – Enero 2025</span>
             <p>Soporte técnico, automatización de procesos digitales y mejora de flujos administrativos (Remoto).</p>
           </div>
         </div>
-        <!-- Exp 2 -->
+        <!-- Exp 3 -->
         <div class="timeline-item right" data-aos="fade-left">
           <div class="timeline-content">
             <h3>Logística y Soporte Digital</h3>
             <h4>HACHT Consultores S.A.C.</h4>
-            <span class="date"><i class="fa-regular fa-calendar"></i> Mar 2022 - Dic 2023</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i> Marzo 2022 - Diciembre 2023</span>
             <p>Digitalización de inventarios, reportes automatizados y mejora de procesos administrativos.</p>
           </div>
         </div>
@@ -428,7 +485,8 @@
   <footer>
     <div class="social-links">
       <a href="https://github.com/Jsoto10" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/jose-soto-IngSistemas" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.linkedin.com/in/jose-soto-IngSistemas" target="_blank"><i
+          class="fa-brands fa-linkedin-in"></i></a>
       <a href="mailto:jsc_cleider@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://wa.me/+51917102676" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
